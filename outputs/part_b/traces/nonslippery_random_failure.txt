@@ -1,0 +1,78 @@
+nonslippery_random, batch seed 11, episode seed 11000, outcome hole, 10 steps
+
+state 0
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 1: action Up -> state 0, reward 0
+  (Up)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 2: action Up -> state 0, reward 0
+  (Up)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 3: action Up -> state 0, reward 0
+  (Up)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 4: action Down -> state 4, reward 0
+  (Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+step 5: action Down -> state 8, reward 0
+  (Down)
+SFFF
+FHFH
+[F]FFH
+HFFG
+
+step 6: action Up -> state 4, reward 0
+  (Up)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+step 7: action Down -> state 8, reward 0
+  (Down)
+SFFF
+FHFH
+[F]FFH
+HFFG
+
+step 8: action Left -> state 8, reward 0
+  (Left)
+SFFF
+FHFH
+[F]FFH
+HFFG
+
+step 9: action Up -> state 4, reward 0
+  (Up)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+step 10: action Right -> state 5, reward 0
+  (Right)
+SFFF
+F[H]FH
+FFFH
+HFFG

@@ -1,0 +1,43 @@
+slippery_random, batch seed 11, episode seed 11000, outcome hole, 5 steps
+
+state 0
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 1: action Up -> state 0, reward 0
+  (Up)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 2: action Up -> state 1, reward 0
+  (Up)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+step 3: action Up -> state 2, reward 0
+  (Up)
+SF[F]F
+FHFH
+FFFH
+HFFG
+
+step 4: action Down -> state 1, reward 0
+  (Down)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+step 5: action Down -> state 5, reward 0
+  (Down)
+SFFF
+F[H]FH
+FFFH
+HFFG

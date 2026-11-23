@@ -1,0 +1,13 @@
+slippery,policy,batch_seed,goals_of_50,holes_of_50,time_limits_of_50,success_percent,mean_steps
+no,random,11,2,48,0,4.0,9.78
+no,random,22,0,50,0,0.0,6.9
+no,random,33,0,50,0,0.0,7.44
+no,fixed,11,50,0,0,100.0,6.0
+no,fixed,22,50,0,0,100.0,6.0
+no,fixed,33,50,0,0,100.0,6.0
+yes,random,11,0,50,0,0.0,8.44
+yes,random,22,1,49,0,2.0,7.76
+yes,random,33,0,50,0,0.0,7.3
+yes,fixed,11,3,47,0,6.0,4.52
+yes,fixed,22,2,48,0,4.0,5.06
+yes,fixed,33,0,50,0,0.0,4.06

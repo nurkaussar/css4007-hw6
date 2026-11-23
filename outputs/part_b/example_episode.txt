@@ -1,0 +1,50 @@
+nonslippery_fixed, batch seed 11, episode seed 11000, outcome goal, 6 steps
+
+state 0
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 1: action Down -> state 4, reward 0
+  (Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+step 2: action Down -> state 8, reward 0
+  (Down)
+SFFF
+FHFH
+[F]FFH
+HFFG
+
+step 3: action Right -> state 9, reward 0
+  (Right)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+step 4: action Right -> state 10, reward 0
+  (Right)
+SFFF
+FHFH
+FF[F]H
+HFFG
+
+step 5: action Down -> state 14, reward 0
+  (Down)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 6: action Right -> state 15, reward 1
+  (Right)
+SFFF
+FHFH
+FFFH
+HFF[G]

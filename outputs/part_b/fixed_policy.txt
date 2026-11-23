@@ -1,0 +1,12 @@
+Fixed policy (action for every nonterminal state):
+state  0 (row 1, col 1): Down
+state  1 (row 1, col 2): Right
+state  2 (row 1, col 3): Down
+state  3 (row 1, col 4): Left
+state  4 (row 2, col 1): Down
+state  6 (row 2, col 3): Down
+state  8 (row 3, col 1): Right
+state  9 (row 3, col 2): Right
+state 10 (row 3, col 3): Down
+state 13 (row 4, col 2): Right
+state 14 (row 4, col 3): Right

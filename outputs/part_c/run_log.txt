@@ -1,0 +1,106 @@
+=== SANITY CHECKS (before trusting the solver) ===
+PASS  top edge: moving up from (1,1) stays in place, reward of the tile it stays on  [(1.0, (1, 1), -1.0, 'up')]
+PASS  right edge: moving right from (3,4) stays in place  [(1.0, (3, 4), -1.0, 'right')]
+PASS  wall: moving right from (2,1) into the wall at (2,2) stays in place  [(1.0, (2, 1), -1.0, 'right')]
+PASS  wall on mud: moving down from mud (1,2) stays and pays the mud reward -3  [(1.0, (1, 2), -3.0, 'down')]
+PASS  ice at (2,3), action up: outcome probabilities sum to 1  outcomes=[(0.8, (1, 3), -1.0), (0.1, (2, 3), -1.0), (0.1, (2, 4), -10.0)]
+PASS  ice at (2,3), action right: outcome probabilities sum to 1  outcomes=[(0.8, (2, 4), -10.0), (0.1, (1, 3), -1.0), (0.1, (3, 3), -1.0)]
+PASS  ice at (2,3), action down: outcome probabilities sum to 1  outcomes=[(0.8, (3, 3), -1.0), (0.1, (2, 3), -1.0), (0.1, (2, 4), -10.0)]
+PASS  ice at (2,3), action left: outcome probabilities sum to 1  outcomes=[(0.8, (2, 3), -1.0), (0.1, (1, 3), -1.0), (0.1, (3, 3), -1.0)]
+PASS  ice up: 0.8 to (1,3), 0.1 blocked by wall stays (2,3), 0.1 to hole (2,4)  [(0.8, (1, 3), -1.0, 'up'), (0.1, (2, 3), -1.0, 'left'), (0.1, (2, 4), -10.0, 'right')]
+PASS  slipping depends on the tile you LEAVE: moving onto ice from (1,3) is deterministic  [(1.0, (2, 3), -1.0, 'down')]
+PASS  mud reward: entering mud (1,2) from (1,1) gives -3
+PASS  sand reward: entering sand (3,2) from (3,1) gives -2 (extended map)
+PASS  water reward: entering water (3,4) from (3,3) gives -5 (extended map)
+PASS  sand and water are deterministic
+PASS  goal reward: entering G gives +10 once, no extra floor cost
+PASS  hole reward: entering H gives -10
+PASS  paper map: terminal (1, 4) (G) has no transitions, so no rewards after termination
+PASS  paper map: terminal (2, 4) (H) has no transitions, so no rewards after termination
+PASS  paper map: wall is not a state
+PASS  extended map: terminal (1, 4) (G) has no transitions, so no rewards after termination
+PASS  extended map: terminal (2, 4) (H) has no transitions, so no rewards after termination
+PASS  extended map: wall is not a state
+PASS  rollout (1,3) -> right: total reward exactly +10 in 1 step, nothing after termination
+23 checks passed.
+
+======================================================================
+MAP: paper_map
+.M.G
+.#IH
+S...
+
+V1 (compare with the paper):
+   -1.0000    -1.0000    10.0000     G     
+   -1.0000     #         -1.0000     H     
+   -1.0000    -1.0000    -1.0000    -1.0000
+largest difference from my paper V1: 0.00e+00
+
+V2 at the three requested positions (action values from V1):
+  (1, 2): up=-3.9000 right=8.0000 down=-3.9000 left=-1.9000 -> V2=8.0000 (best: right); paper 8.0000, difference 0.00e+00
+  (1, 3): up=8.0000 right=10.0000 down=-1.9000 left=-3.9000 -> V2=10.0000 (best: right); paper 10.0000, difference 0.00e+00
+  (2, 3): up=5.2100 right=-7.3900 down=-2.7100 left=-0.9100 -> V2=5.2100 (best: up); paper 5.2100, difference 0.00e+00
+
+value iteration: 12 iterations, final largest change 2.165e-07, converged=True
+
+Final values:
+    4.2000     8.0000    10.0000     G     
+    2.7800     #          5.8242     H     
+    1.5358     2.8176     4.2418     2.8176
+
+Policy (ties broken by the order up, right, down, left):
+>  >  >  G
+^  #  ^  H
+>  >  ^  <
+States with tied best actions: none
+
+Simulation of the computed policy on paper_map (3 batches x 50 episodes, max 100 steps):
+| Batch seed | Goals /50 | Holes /50 | Time limits /50 | Mean steps | Mean discounted return |
+| --- | --- | --- | --- | --- | --- |
+| 11 | 42 | 8 | 0 | 4.98 | 0.8913 |
+| 22 | 46 | 4 | 0 | 5.04 | 1.9148 |
+| 33 | 48 | 2 | 0 | 5.04 | 2.4921 |
+mean discounted return over all 150 episodes: 1.7661   value of the start tile V*(S) = 1.5358
+======================================================================
+MAP: extended_map
+.M.G
+.#IH
+SD.W
+
+value iteration: 11 iterations, final largest change 2.406e-07, converged=True
+
+Final values:
+    4.2000     8.0000    10.0000     G     
+    2.7800     #          5.8242     H     
+    1.5020     2.8176     4.2418     2.8176
+
+Policy (ties broken by the order up, right, down, left):
+>  >  >  G
+^  #  ^  H
+^  >  ^  <
+States with tied best actions: none
+
+Simulation of the computed policy on extended_map (3 batches x 50 episodes, max 100 steps):
+| Batch seed | Goals /50 | Holes /50 | Time limits /50 | Mean steps | Mean discounted return |
+| --- | --- | --- | --- | --- | --- |
+| 11 | 50 | 0 | 0 | 5.00 | 1.5020 |
+| 22 | 50 | 0 | 0 | 5.00 | 1.5020 |
+| 33 | 50 | 0 | 0 | 5.00 | 1.5020 |
+mean discounted return over all 150 episodes: 1.5020   value of the start tile V*(S) = 1.5020
+
+======================================================================
+COMPARISON: paper map vs extended map (same coordinates)
+tile changes: (3, 2) .->D, (3, 4) .->W
+(row, col) | tile paper->ext | V paper | V ext | change | action paper | action ext
+(1, 1) | .->. |    4.2000 |    4.2000 |   +0.0000 | right | right 
+(1, 2) | M->M |    8.0000 |    8.0000 |   +0.0000 | right | right 
+(1, 3) | .->. |   10.0000 |   10.0000 |   +0.0000 | right | right 
+(2, 1) | .->. |    2.7800 |    2.7800 |   +0.0000 | up    | up    
+(2, 3) | I->I |    5.8242 |    5.8242 |   -0.0000 | up    | up    
+(3, 1) | S->S |    1.5358 |    1.5020 |   -0.0338 | right | up    CHANGED
+(3, 2) | .->D |    2.8176 |    2.8176 |   -0.0000 | right | right 
+(3, 3) | .->. |    4.2418 |    4.2418 |   -0.0000 | up    | up    
+(3, 4) | .->W |    2.8176 |    2.8176 |   -0.0000 | left  | left  
+
+Ice tile (2,3): paper action up, extended action up; Q-values (paper): {'up': 5.8242, 'right': -6.9182, 'down': 1.6782, 'left': 4.4752}
+Iterations: paper map 12 (change 2.17e-07, converged True); extended map 11 (change 2.41e-07, converged True)

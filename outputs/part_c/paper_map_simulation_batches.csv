@@ -1,0 +1,4 @@
+map,batch_seed,goals_of_50,holes_of_50,time_limits_of_50,mean_steps,mean_discounted_return
+paper_map,11,42,8,0,4.98,0.8912600000000006
+paper_map,22,46,4,0,5.04,1.9147760000000003
+paper_map,33,48,2,0,5.04,2.4921440000000015

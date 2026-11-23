@@ -1,0 +1,22 @@
+slippery_fixed, batch seed 11, episode seed 11000, outcome hole, 2 steps
+
+state 0
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 1: action Down -> state 1, reward 0
+  (Down)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+step 2: action Right -> state 5, reward 0
+  (Right)
+SFFF
+F[H]FH
+FFFH
+HFFG

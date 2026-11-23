@@ -1,0 +1,99 @@
+slippery_random, batch seed 22, episode seed 22034, outcome goal, 13 steps
+
+state 0
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 1: action Down -> state 0, reward 0
+  (Down)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 2: action Down -> state 4, reward 0
+  (Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+step 3: action Right -> state 0, reward 0
+  (Right)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 4: action Down -> state 1, reward 0
+  (Down)
+S[F]FF
+FHFH
+FFFH
+HFFG
+
+step 5: action Up -> state 2, reward 0
+  (Up)
+SF[F]F
+FHFH
+FFFH
+HFFG
+
+step 6: action Left -> state 6, reward 0
+  (Left)
+SFFF
+FH[F]H
+FFFH
+HFFG
+
+step 7: action Right -> state 10, reward 0
+  (Right)
+SFFF
+FHFH
+FF[F]H
+HFFG
+
+step 8: action Down -> state 9, reward 0
+  (Down)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+step 9: action Down -> state 13, reward 0
+  (Down)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+step 10: action Left -> state 9, reward 0
+  (Left)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+step 11: action Up -> state 10, reward 0
+  (Up)
+SFFF
+FHFH
+FF[F]H
+HFFG
+
+step 12: action Right -> state 14, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 13: action Down -> state 15, reward 1
+  (Down)
+SFFF
+FHFH
+FFFH
+HFF[G]

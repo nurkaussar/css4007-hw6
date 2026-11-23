@@ -1,0 +1,155 @@
+slippery_fixed, batch seed 11, episode seed 11012, outcome goal, 21 steps
+
+state 0
+
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 1: action Down -> state 0, reward 0
+  (Down)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 2: action Down -> state 0, reward 0
+  (Down)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 3: action Down -> state 0, reward 0
+  (Down)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 4: action Down -> state 0, reward 0
+  (Down)
+[S]FFF
+FHFH
+FFFH
+HFFG
+
+step 5: action Down -> state 4, reward 0
+  (Down)
+SFFF
+[F]HFH
+FFFH
+HFFG
+
+step 6: action Down -> state 8, reward 0
+  (Down)
+SFFF
+FHFH
+[F]FFH
+HFFG
+
+step 7: action Right -> state 9, reward 0
+  (Right)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+step 8: action Right -> state 13, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+step 9: action Right -> state 13, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+step 10: action Right -> state 13, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+step 11: action Right -> state 13, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+step 12: action Right -> state 14, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 13: action Right -> state 14, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 14: action Right -> state 10, reward 0
+  (Right)
+SFFF
+FHFH
+FF[F]H
+HFFG
+
+step 15: action Down -> state 9, reward 0
+  (Down)
+SFFF
+FHFH
+F[F]FH
+HFFG
+
+step 16: action Right -> state 13, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+H[F]FG
+
+step 17: action Right -> state 14, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 18: action Right -> state 14, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 19: action Right -> state 14, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 20: action Right -> state 14, reward 0
+  (Right)
+SFFF
+FHFH
+FFFH
+HF[F]G
+
+step 21: action Right -> state 15, reward 1
+  (Right)
+SFFF
+FHFH
+FFFH
+HFF[G]
